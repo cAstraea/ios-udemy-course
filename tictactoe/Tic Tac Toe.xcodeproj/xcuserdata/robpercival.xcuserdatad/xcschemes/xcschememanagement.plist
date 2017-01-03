@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>tictactoe.xcscheme</key>
+		<key>Tic Tac Toe 2.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Tic Tac Toe.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5B4F3E251E10A83B00134002</key>
+		<key>C82A43E21AA6015D008037CC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C82A43F71AA6015D008037CC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  tictactoe
+//  Tic Tac Toe
 //
 //  Created by Razvan Comsa on 12/26/16.
 //  Copyright © 2016 castraea. All rights reserved.

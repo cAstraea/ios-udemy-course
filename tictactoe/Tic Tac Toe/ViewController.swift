@@ -25,10 +25,10 @@ class ViewController: UIViewController {
     
     @IBAction func playAgainPressed(sender: AnyObject) {
         
-         activePlayer = 1
-         gameActive = true
-         gameState = [0, 0, 0 ,0 ,0 ,0, 0, 0, 0]
-         moves = 0
+        activePlayer = 1
+        gameActive = true
+        gameState = [0, 0, 0 ,0 ,0 ,0, 0, 0, 0]
+        moves = 0
         
         var button:UIButton
         for i in 0 ..< 9  {
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
             playAgainButton.center = CGPointMake(playAgainButton.center.x - 400, playAgainButton.center.y)
             
         }
-       
+        
         
     }
     
@@ -71,7 +71,7 @@ class ViewController: UIViewController {
             
             
             sender.setImage(image, forState: .Normal)
-       
+            
             
             for combination in winningCombinations {
                 var labelText = "It's a draw"
@@ -81,28 +81,28 @@ class ViewController: UIViewController {
                     labelText = "Noughts has won!"
                     
                     if gameState[combination[0]] == 2 {
-                     labelText = "crosses has won!"
+                        labelText = "crosses has won!"
                     }
                     
-                   
                     
-                  gameOverLabel.text = labelText
+                    
+                    gameOverLabel.text = labelText
                     
                     gameOverLabel.hidden = false
                     
                     playAgainButton.hidden = false
                     
                     UIView.animateWithDuration(0.5, animations: {
-                       self.gameOverLabel.center = CGPointMake(self.gameOverLabel.center.x + 400, self.gameOverLabel.center.y)
+                        self.gameOverLabel.center = CGPointMake(self.gameOverLabel.center.x + 400, self.gameOverLabel.center.y)
                         self.playAgainButton.center = CGPointMake(self.playAgainButton.center.x + 400, self.playAgainButton.center.y)
                     })
                     
                     gameActive = false
                 }
-                
+                    
                 else {
                     if moves == 9 {
-                         print("it's a draw")
+                        print("it's a draw")
                         gameOverLabel.text = labelText
                         
                         gameOverLabel.hidden = false
@@ -114,7 +114,7 @@ class ViewController: UIViewController {
                             self.playAgainButton.center = CGPointMake(self.playAgainButton.center.x + 400, self.playAgainButton.center.y)
                         })
                     }
-                   
+                    
                     
                 }
                 
@@ -122,12 +122,12 @@ class ViewController: UIViewController {
             
         }
         
-
         
-     
+        
+        
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         gameOverLabel.hidden = true
@@ -136,17 +136,17 @@ class ViewController: UIViewController {
         gameOverLabel.center = CGPointMake(gameOverLabel.center.x - 400, gameOverLabel.center.y)
         playAgainButton.center = CGPointMake(playAgainButton.center.x - 400, playAgainButton.center.y)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     override func viewDidLayoutSubviews() {
-      
-
+        
+        
     }
-
-
+    
+    
 }
 
