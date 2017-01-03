@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Audio" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctX-dR-QbC">
+                                <rect key="frame" x="-4" y="20" width="328" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Ftw-Bs-hhO"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="I wish I were a bird" id="8SI-9z-I2G"/>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="azumangah.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5kU-N1-aGY">
+                                <rect key="frame" x="20" y="157" width="280" height="294"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="294" id="b6u-Z9-TC0"/>
+                                    <constraint firstAttribute="width" constant="280" id="nff-B0-0CK"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lLh-FN-HuH">
+                                <rect key="frame" x="101" y="408" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="pU0-xZ-nxa"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="pHn-Ny-CpC"/>
+                                </connections>
+                            </slider>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mMR-03-xSa">
+                                <rect key="frame" x="-4" y="516" width="328" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="gCW-f1-9rJ"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="play" id="Vu4-rE-8ZH">
+                                        <connections>
+                                            <action selector="PlayPause:" destination="BYZ-38-t0r" id="P9w-0x-IEf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wf5-R5-7uC"/>
+                                    <barButtonItem systemItem="stop" id="l4b-bh-l6G">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="yGg-XA-PmG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lLh-FN-HuH" firstAttribute="top" secondItem="ctX-dR-QbC" secondAttribute="bottom" constant="344" id="7dO-eM-bXw"/>
+                            <constraint firstItem="lLh-FN-HuH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7kV-gL-PGR"/>
+                            <constraint firstItem="mMR-03-xSa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="AF4-rH-NcN"/>
+                            <constraint firstItem="mMR-03-xSa" firstAttribute="top" secondItem="5kU-N1-aGY" secondAttribute="bottom" constant="65" id="Jhh-r1-My8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mMR-03-xSa" secondAttribute="bottom" constant="8" id="NB8-0L-F9z"/>
+                            <constraint firstItem="5kU-N1-aGY" firstAttribute="centerX" secondItem="mMR-03-xSa" secondAttribute="centerX" id="Ncf-Iv-6LZ"/>
+                            <constraint firstItem="lLh-FN-HuH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="87" id="QeL-XC-r6R"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mMR-03-xSa" secondAttribute="trailing" constant="-20" id="QxH-jH-XMG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ctX-dR-QbC" secondAttribute="trailing" constant="-20" id="fnn-Ry-3rm"/>
+                            <constraint firstItem="ctX-dR-QbC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="uTV-G4-9rU"/>
+                            <constraint firstItem="ctX-dR-QbC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="yAa-Gn-0Jv"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="sliderValue" destination="lLh-FN-HuH" id="HUh-XY-1kC"/>
+                        <outlet property="toolbar" destination="mMR-03-xSa" id="nl5-Kf-ss3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="452"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="azumangah.jpg" width="1920" height="1200"/>
+    </resources>
+</document>
